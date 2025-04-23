@@ -17,7 +17,7 @@ function App() {
   const fetchTodos = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost/mytodo-app/backend/todo-api.php");
+      const res = await fetch("https://todo-api-backend-production.up.railway.app/todo-api.php");
       const data = await res.json();
       setTodos(data);
     } catch (error) {
@@ -41,7 +41,7 @@ function App() {
     setTask("");
     
     try {
-      await fetch("http://localhost/mytodo-app/backend/todo-api.php", {
+      await fetch("https://todo-api-backend-production.up.railway.app/todo-api.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ task }),
@@ -56,7 +56,7 @@ function App() {
     setTodos(todos.filter(todo => todo.id !== id));
     
     try {
-      await fetch(`http://localhost/mytodo-app/backend/todo-api.php?id=${id}`, { 
+      await fetch(`https://todo-api-backend-production.up.railway.app/todo-api.php?id=${id}`, { 
         method: "DELETE" 
       });
     } catch (error) {
@@ -73,7 +73,7 @@ function App() {
     );
     
     try {
-      await fetch(`http://localhost/mytodo-app/backend/todo-api.php?id=${id}`, {
+      await fetch(`https://todo-api-backend-production.up.railway.app/todo-api.php?id=${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ task, completed: completed ? 0 : 1 }),
