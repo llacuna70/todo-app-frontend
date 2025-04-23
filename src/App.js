@@ -9,9 +9,9 @@ function App() {
   const [filter, setFilter] = useState("all");
   const [isLoading, setIsLoading] = useState(true);
 
-  const API_URL = "https://todo-api-backend-production.up.railway.app/todo-api.php";
+  // const API_URL = "https://todo-api-backend-production.up.railway.app/todo-api.php";
 
-  // const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = process.env.REACT_APP_API_URL;
   
 
   useEffect(() => {
