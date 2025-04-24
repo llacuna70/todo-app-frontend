@@ -16,6 +16,13 @@ function App() {
   //  For LOCALHOST dili maka gamit ug process.env.LOCAL_APP_URL;
   // const API_URL = 'http://localhost/mytodo-app/backend/todo-api.php';
 
+  // For MYsql workbench connect localhost from database
+  
+  // Not working process.env.MYSQLWB_APP_URL;
+  // const API_URL = process.env.MYSQLWB_APP_URL;
+  // const API_URL = "http://localhost:8000/todo-api.php";
+
+
   useEffect(() => {
     fetchTodos();
     document.body.className = theme;
