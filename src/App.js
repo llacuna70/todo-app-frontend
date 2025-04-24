@@ -9,10 +9,12 @@ function App() {
   const [filter, setFilter] = useState("all");
   const [isLoading, setIsLoading] = useState(true);
 
-  // const API_URL = "https://todo-api-backend-production.up.railway.app/todo-api.php";
+  const API_URL = "https://todo-api-backend-production.up.railway.app/todo-api.php";
 
-  const API_URL = process.env.REACT_APP_API_URL;
+  // const API_URL = process.env.REACT_APP_API_URL;
   
+  //  For LOCALHOST dili maka gamit ug process.env.LOCAL_APP_URL;
+  // const API_URL = 'http://localhost/mytodo-app/backend/todo-api.php';
 
   useEffect(() => {
     fetchTodos();
